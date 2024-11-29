@@ -123,3 +123,13 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+'''
+Significance: This is where you define all your project-wide settings, including database configuration, installed apps, middleware, and other settings.
+Database settings: (PostgreSQL, SQLite, etc.)
+Installed apps: Add your apps here (e.g., 'myapp', 'rest_framework').
+CORS settings: If using React for the frontend, you'll need to enable CORS to allow cross-origin requests.
+Other settings: Static files, authentication, etc.
+'''
