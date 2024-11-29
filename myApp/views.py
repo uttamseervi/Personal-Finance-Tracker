@@ -4,6 +4,9 @@ from django.http import HttpResponse
 
 def home(request):
     return HttpResponse("Hello, Django!")
+def dashboard(request):
+    return render(request, "myApp/dashboard.html")
+    # return HttpResponse("Welcome to the dashboard!")
 
 
 

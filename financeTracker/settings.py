@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'myApp' # add this line dont forget otherwise html will not be rendered
 ]
 
 MIDDLEWARE = [
@@ -51,10 +53,14 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'financeTracker.urls'
 
+
+
+
+# In the context of Django, dirs refers to a list of directories where Django should search for templates. It is often used as part of the TEMPLATES setting in Django's settings.py file to define the locations of your HTML template files.
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

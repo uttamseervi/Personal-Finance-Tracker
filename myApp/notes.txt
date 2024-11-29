@@ -1,0 +1,23 @@
+INSTALLED_APPS:
+
+This is a list in the settings.py file where you register all your Django apps.
+Each app should be included in this list to be recognized by Django, so that it can be properly configured, and Django can discover its resources (views, models, templates, etc.).
+Key point: Without adding an app here, Django will not recognize it, and its files won't be accessible for use (like templates or models).
+Template Directory Setup:
+
+Django uses templates to generate HTML responses for views. These templates are typically stored in a templates/ directory.
+In the settings.py file, under the TEMPLATES setting, you define the directory or directories where Django should look for these templates.
+The DIRS key in the TEMPLATES setting defines a list of directories where templates are stored. The most common setup is to use the BASE_DIR variable to set the root directory of the project and then add a templates/ subfolder.
+Key point: This tells Django where to look for global templates (e.g., site-wide templates like header, footer) that are not part of an app.
+APP_DIRS and App-Specific Templates:
+
+If APP_DIRS is set to True, Django will also look for a templates/ folder inside each app's directory. This allows for app-specific templates.
+Key point: This makes it easy to organize templates by placing them within each app’s directory.
+Why Both Are Needed:
+INSTALLED_APPS ensures that your app is recognized by Django.
+TEMPLATES setting tells Django where to look for the template files, both globally and within each app.
+Flow:
+Django recognizes your app (via INSTALLED_APPS).
+Django searches for templates (via the TEMPLATES setting, where it looks in the directories defined under DIRS and inside each app's templates/ directory).
+Django renders the templates when the views request them.
+This allows Django to efficiently locate and render the correct template for each view based on its configuration
