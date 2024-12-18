@@ -19,28 +19,28 @@ export function SidebarDemo({ children }) {
             label: "Dashboard",
             href: "/",
             icon: (
-                <IconBrandTabler className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+                <IconBrandTabler className="text-neutral-700  h-5 w-5 flex-shrink-0" />
             ),
         },
         {
             label: "Income",
             href: "/income",
             icon: (
-                <IconMapDollar className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+                <IconMapDollar className="text-neutral-700  h-5 w-5 flex-shrink-0" />
             ),
         },
         {
             label: "Budgets",
             href: "/budgets",
             icon: (
-                <IconPingPong className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+                <IconPingPong className="text-neutral-700 h-5 w-5 flex-shrink-0" />
             ),
         },
         {
             label: "Logout",
             href: "#",
             icon: (
-                <IconLogout2 className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+                <IconLogout2 className="text-neutral-700  h-5 w-5 flex-shrink-0" />
             ),
         },
     ];
@@ -48,16 +48,16 @@ export function SidebarDemo({ children }) {
     return (
         (<div
             className={cn(
-                "rounded-md flex flex-col md:flex-row  dark:bg-[#4A4947] w-full flex-1  mx-auto border border-neutral-200 dark:border-neutral-700 overflow-hidden",
-                "h-screen"
+                "rounded-md flex flex-col md:flex-row  bg-[#FAF7F0] w-full flex-1  mx-auto border border-neutral-200 dark:border-neutral-700 overflow-hidden",
+                "h-min"
             )}>
             <Sidebar open={open} setOpen={setOpen}>
-                <SidebarBody className="justify-between gap-10 border border-r-2 bg-[#FAF7F0] text-[#4A4947]">
+                <SidebarBody className="justify-between gap-10 border border-r-2 bg-[#FAF7F0] text-[#4A4947] h-full">
                     <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
                         {open ? <Logo /> : <LogoIcon />}
                         <div className="mt-8 flex flex-col gap-2">
                             {links.map((link, idx) => (
-                                <SidebarLink key={idx} link={link} />
+                                <SidebarLink key={idx} link={link} className={""}/>
                             ))}
                         </div>
                     </div>
@@ -96,7 +96,7 @@ export const Logo = () => {
             href="#"
             className="font-normal flex space-x-2 items-center text-sm text-[#3F3F44] py-1 relative z-20">
             <div
-                className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
+                className="h-5 w-6 bg-black  rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
             <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

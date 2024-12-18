@@ -20,11 +20,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased  bg-[#FAF7F0] text-[#FAF7F0]`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased  bg-[#FAF7F0] text-[#FAF7F0] transition-all smooth`}
       >
         <main className="h-screen w-screen">
           <SidebarDemo children={children} />
-          
+
         </main>
       </body>
     </html>
