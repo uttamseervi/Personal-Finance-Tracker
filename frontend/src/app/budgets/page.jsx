@@ -1,12 +1,16 @@
+import { CreateBudgetButton } from '@/components/global/createBudegetButton';
 import React from 'react';
 
 const FullScreenDummy = () => {
     return (
-        <div className="w-full h-screen bg-gray-800 flex items-center justify-center">
-            <div className="text-center text-white">
-                <h1 className="text-4xl font-bold">Welcome to Full-Screen Dummy Component</h1>
-                <p className="mt-4 text-xl">This is a placeholder component that covers the entire screen.</p>
+        <div className="w-full h-screen bg-[#FAF7F0] p-4">
+            <h1 className='font-bold text-3xl text-black mb-5 font-sans'> My Budgets</h1>
+            <div>
+                <div id='budgetCard' className='bg-[#d7d1d1] border-2 border-dashed  h-56 w-80 rounded-[20px] md:ml-5 flex items-center justify-center'>
+                <CreateBudgetButton/>
+                </div>
             </div>
+
         </div>
     );
 };
