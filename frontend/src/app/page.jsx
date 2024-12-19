@@ -83,8 +83,8 @@ export default function Home() {
       </div>
 
       {/* activity */}
-      <section className="mt-10 md:ml-20 ml-6 flex gap-8">
-        <div id="graph" className="w-[490px] h-[360px] bg-transparent rounded-[18px]">
+      <section className="mt-10 md:ml-20  flex flex-col md:flex gap-8">
+        <div id="graph" className="md:w-[490px] md:h-[360px] bg-transparent rounded-[18px]">
           <Card className="bg-transparent text-white">
             <BarChart className="" data={data} index="Weather" categories={['Classmates']} />
           </Card>
